@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+ <html lang="en">
+ <head>
+     <meta charset="UTF-8">
+     <meta name="viewport" content="width=device-width, initial-scale=1">
+     <title>Javascript Task 3</title>
+ </head>
+ <body>
+     <script>
+        const findOccurence = (n) => {
+            console.log(n);
+            let result =[];
+            
+            for (let i =1; i <= n; i++){
+                if (i % 2 ===0 && i % 3 ===0){
+                    result = [...result,"yu-gi"]
+                }else if(i % 2 ===0 && i % 5 ===0){
+                    result = [...result,"yu-oh"]
+                }else if(i % 3 ===0 && i % 5 ===0){
+                    result = [...result,"gi-oh"]
+                }else if(i % 2 ===0){
+                    result = [...result,"yu"]
+                }else if(i % 3 ===0){
+                    result = [...result,"gi"]
+                }else if(i % 5 ===0){
+                    result = [...result,"oh"]
+                }else{
+                    result =[...result,i]
+                }
+            }
+            return result;
+        }
+        console.log(findOccurence(100))
+     </script>
+</body>
+</html>
+
